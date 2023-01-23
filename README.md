@@ -1,5 +1,13 @@
 ## FeedFeature
 
+A clean stable starting point for building #ios apps. 
+
+Simple modular testable features/components. 
+Stack - Factory, Coordinator, MVVM, Repository and Web service. 
+Coordinator plugs into host app's SceneDelegate::willConnectTo with app injected navigation controller.
+
+![FeedFeature](feedfeature-classes.png) 
+
 ```swift
 //
 //  FeedFeature.swift
@@ -282,4 +290,3 @@ class PostTableViewCell: UITableViewCell {
 }
 
 ```
-![FeedFeature](feedfeature-classes.png) 
