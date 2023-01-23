@@ -1,6 +1,6 @@
 ## FeedFeature
 
-A clean stable starting point for building #ios apps. 
+A clean stable starting point for building ios apps. 
 
 Simple modular testable features/components. 
 Stack - Factory, Coordinator, MVVM, Repository and Web service. 
