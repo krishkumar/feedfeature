@@ -6,6 +6,8 @@ Simple modular testable features/components.
 Stack - Factory, Coordinator, MVVM, Repository and Web service. 
 Coordinator plugs into host app's SceneDelegate::willConnectTo with app injected navigation controller.
 
++ DeepLinkHandler
+
 ![FeedFeature](feedfeature-classes.png) 
 
 ```swift
@@ -289,4 +291,26 @@ class PostTableViewCell: UITableViewCell {
     }
 }
 
+//DeepLinkHandler.swift
+class DeepLinkHandler {
+    func handleDeepLink(_ url: URL) {
+        switch url.path {
+        case "/profile":
+            ProfileViewModel().handleDeepLink()
+        case "/settings":
+            SettingsViewModel().handleDeepLink()
+        default:
+            break
+        }
+    }
+}
+
+//AppDelegate.swift
+func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+    DeepLinkHandler().handleDeepLink(url)
+    return true
+}
+
 ```
+
+
